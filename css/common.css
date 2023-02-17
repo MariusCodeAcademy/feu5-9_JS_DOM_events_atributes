@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  /* 1 rem = 10px */
+  font-size: 62.5%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p,
+li,
+a {
+  font-size: 1.6rem;
+}
+
+button {
+  cursor: pointer;
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* common rules */
+.container {
+  padding-left: 10px;
+  padding-right: 10px;
+  /* apridboti tik maximalu ploti */
+  max-width: 80rem;
+  /* skaiciuoti parastes automatiskai vienodai is kaires ir is desines */
+  margin: 0 auto;
+}
+
+/* utility classes */
+
+.flex {
+  display: flex;
+}
+
+.between {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tac {
+  text-align: center;
+}
