@@ -4,6 +4,7 @@ console.log('classList.js file was loaded');
 // nusitaikom
 const h1El = document.querySelector('h1');
 const listEl = document.getElementById('itemsList');
+const darkModeBntEl = document.getElementById('darkModeBtn');
 
 // uzdeti klase h1El mainTitle
 h1El.classList.add('mainTitle');
@@ -30,3 +31,6 @@ function toggleDarkMode() {
   listEl.classList.toggle('darkModeOn');
 }
 toggleDarkMode();
+
+// nusitaikyti i mygtuka ir reaguoti i paspaudima
+// darkModeBntEl.onclick = toggleDarkMode;
