@@ -13,3 +13,7 @@
   background-color: #333;
   color: white;
 }
+
+.active::after {
+  content: ' -- Active';
+}
