@@ -51,7 +51,7 @@ mainTitleBtnEl.addEventListener('click', inputToH1);
 // mainTitleBtnEl.addEventListener('click', inputToH3);
 
 // ivedimo i input metu imam reiksme ir dedam i h3
-mainTitleInputEl.addEventListener('input', inputToH3);
+mainTitleInputEl.addEventListener('keydown', inputToH3);
 
 function inputToH1() {
   console.log('inputToH1 function ran');
@@ -66,7 +66,11 @@ function inputToH1() {
 
 // <h3 id="currentValue">currentValue</h3>
 // sukurti funkcija, kuri paima reiksme is input ir patalpina ja aukciau nurodytame elmente
-function inputToH3() {
+function inputToH3(event) {
+  console.log('event.keyCode ===', event.keyCode);
+  if (event.keyCode === 13) {
+    // paspausta enter
+  }
   // console.log('inputToH3 works');
   const inputText = mainTitleInputEl.value;
   currentValueEl.textContent = inputText;
