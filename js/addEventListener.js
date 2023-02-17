@@ -45,8 +45,13 @@ function toggleBtnText() {
 // paimti teksta ivesta i input ir paspaudus mygtuka patalpinti ji h1 el
 const mainTitleInputEl = document.getElementById('mainTitleInput');
 const mainTitleBtnEl = document.getElementById('mainTitleBtn');
+const currentValueEl = document.getElementById('currentValue');
 
 mainTitleBtnEl.addEventListener('click', inputToH1);
+// mainTitleBtnEl.addEventListener('click', inputToH3);
+
+// ivedimo i input metu imam reiksme ir dedam i h3
+mainTitleInputEl.addEventListener('input', inputToH3);
 
 function inputToH1() {
   console.log('inputToH1 function ran');
@@ -56,9 +61,14 @@ function inputToH1() {
   // patalpinti text i h1
   h1El.textContent = textInInput;
   // isvalyti input value
-  mainTitleInputEl.value = '';
+  // mainTitleInputEl.value = '';
 }
 
 // <h3 id="currentValue">currentValue</h3>
-// sukurtifunkcija, kuri paima reiksme is input ir patalpina ja aukciau nurodytame elmente
+// sukurti funkcija, kuri paima reiksme is input ir patalpina ja aukciau nurodytame elmente
+function inputToH3() {
+  // console.log('inputToH3 works');
+  const inputText = mainTitleInputEl.value;
+  currentValueEl.textContent = inputText;
+}
 // prideti funckija prie mygtuko paspaudimo
